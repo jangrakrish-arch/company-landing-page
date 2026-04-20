@@ -1,0 +1,147 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, orange, red);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+header button {
+    margin-top: 20px;
+    padding: 12px 28px;
+    border: none;
+    background: white;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+header button:hover {
+    background: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* FLEX */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* CARDS */
+.box {
+    background: #f4f4f4;
+    padding: 25px;
+    width: 250px;
+    border-radius: 15px;
+    transition: 0.4s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.box img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.box:hover {
+    transform: translateY(-12px) scale(1.03);
+    background: #ffe5e5;
+    box-shadow: 0 10px 25px rgba(255,0,0,0.3);
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    padding: 20px;
+}
+
+/* 🔥 AUTHOR BADGE */
+.author {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* BADGE */
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 7px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.badge img {
+    width: 16px;
+}
+
+/* HOVER */
+.badge:hover {
+    background: linear-gradient(to right, orange, red);
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.6);
+}
+
+/* TOOLTIP */
+.tooltip {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: black;
+    color: white;
+    font-size: 11px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.author:hover .tooltip {
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+}
